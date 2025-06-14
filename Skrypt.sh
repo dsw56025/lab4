@@ -1,8 +1,8 @@
 #!/bin/bash
 
-if [ "$1" == "--date" ]; then
+if [ "$1" == "--date" || "$1" == "-d" ]; then
     date
-elif [ "$1" == "--logs" ]; then
+elif [ "$1" == "--logs" || "$1" == "-l" ]; then
 	amount=${2:-100}
     for ((i=1; i<=amount; i++)); do
         logfile="log${i}.txt"
@@ -10,7 +10,7 @@ elif [ "$1" == "--logs" ]; then
         echo "Skrypt: $0" >> "$logfile"
         echo "Data: $(date)" >> "$logfile"
     done
-elif [ "$1" == "--help" ]; then
+elif [ "$1" == "--help" || "$1" == "-h" ]; then
     echo "Polecenia:"
     echo "  --date           Wyświetla dzisiejszą datę"
     echo "  --logs [liczba]  Tworzy pliki log.txt (domyslnie 100) "

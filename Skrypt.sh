@@ -12,7 +12,7 @@ elif [ "$1" == "--logs" || "$1" == "-l" ]; then
     done
 elif [ "$1" == "--help" || "$1" == "-h" ]; then
     echo "Polecenia:"
-    echo "  --date           Wyświetla dzisiejszą datę"
-    echo "  --logs [liczba]  Tworzy pliki log.txt (domyslnie 100) "
-    echo "  --help           Wyświetla pomoc"
+    echo "  --date, -d           			Wyświetla dzisiejszą datę"
+    echo "  --logs [liczba], -l [liczba]    Tworzy pliki log.txt (domyslnie 100) "
+    echo "  --help, -h                      Wyświetla pomoc"
 fi

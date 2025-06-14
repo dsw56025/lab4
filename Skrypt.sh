@@ -23,15 +23,16 @@ elif [[ "$1" == "--error" || "$1" == "-e" ]]; then
         echo "Data: $(date)" >> "$errorfile"
     done
 	
-elif [[ "$1" == "--help" || "$1" == "-h" ]]; then
-    echo "Polecenia:"
-    echo "  --date           Wyświetla dzisiejszą datę"
-    echo "  --logs [liczba]  Tworzy pliki log.txt (domyslnie 100) "
-    echo "  --help           Wyświetla pomoc"
-	
 elif [[ "$1" == "--init" ]]; then
 
 	git clone "https://github.com/dsw56025/lab4.git"
     export PATH="$PATH:$(pwd)"
-
+	
+elif [[ "$1" == "--help" || "$1" == "-h" ]]; then
+    echo "Polecenia:"
+    echo "  --date, -d                     Wyświetla dzisiejszą datę"
+    echo "  --logs [liczba], -l [liczba]   Tworzy pliki log.txt (domyslnie 100) "
+	echo "  --error [liczba], -e [liczba]  Tworzy pliki errorx/errorx.txt (domyslnie 100) "
+	echo "  --init, -i                     Klonuje repozytorium do katalogu robocze i dodaje sciezke do PATH "
+    echo "  --help, -h                     Wyświetla pomoc"
 fi

@@ -3,7 +3,8 @@
 if [ "$1" == "--date" ]; then
     date
 elif [ "$1" == "--logs" ]; then
-    for i in {1..100}; do
+	amount=${2:-100}
+    for ((i=1; i<=amount; i++)); do
         logfile="log${i}.txt"
         echo "Plik: $logfile" > "$logfile"
         echo "Skrypt: $0" >> "$logfile"

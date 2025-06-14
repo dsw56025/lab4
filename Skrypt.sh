@@ -10,4 +10,9 @@ elif [ "$1" == "--logs" ]; then
         echo "Skrypt: $0" >> "$logfile"
         echo "Data: $(date)" >> "$logfile"
     done
+elif [ "$1" == "--help" ]; then
+    echo "Polecenia:"
+    echo "  --date           Wyświetla dzisiejszą datę"
+    echo "  --logs [liczba]  Tworzy pliki log.txt (domyslnie 100) "
+    echo "  --help           Wyświetla pomoc"
 fi
